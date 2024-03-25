@@ -5,7 +5,7 @@
 # Close any open System Preferences panes, to prevent them from overriding
 # changed settings
 
-# Ask for teh admin password
+# Ask for the admin password
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until script is finished
