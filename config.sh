@@ -78,6 +78,8 @@ printf "%sAdjusting macOS...\n%s" $yellow $end
     #
     # Disable line marks
     defaults write com.apple.Terminal ShowLineMarks -int 0
+    # Stop terminal from saving zsh sessions
+    defaults write com.apple.Terminal NSQuitAlwaysKeepsWindows -bool false
 } &> /dev/null
 
 printf "%sDone!%s" $green $end
