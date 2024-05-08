@@ -12,7 +12,9 @@ Most of the customizations were taken from (https://github.com/mdo/config)
 
 * Use the following command to run the `config.sh` file in Terminal
 
-```curl https://raw.githubusercontent.com/exkcd/config/main/config.sh > ~/Downloads/config.sh && zsh ~/Downloads/config.sh```
+```zsh
+curl https://raw.githubusercontent.com/exkcd/config/main/config.sh > ~/Downloads/config.sh && zsh ~/Downloads/config.sh
+```
 
 ### Homebrew formulae and casks
 
