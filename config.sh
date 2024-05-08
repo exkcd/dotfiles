@@ -5,6 +5,8 @@
 # Close any open System Preferences panes, to prevent them from overriding
 # changed settings
 
+osascript -e 'tell application "System Preferences" to quit'
+
 # Ask for the admin password
 sudo -v
 
@@ -24,10 +26,17 @@ cyan=$'\e[1;36m'
 end=$'\e[0m'
 
 #
+# Copying dotfiles
+#
+
+printf "%s\n# Copying dotfiles...\n%s" $yellow $end
+    curl https://raw.githubusercontent.com/exkcd/config/main/ >
+
+#
 # macOS preferences
 #
 
-printf "%sAdjusting macOS...\n%s" $yellow $end
+printf "%s\n# Adjusting macOS...\n%s" $yellow $end
 {
     # Dock
     #
@@ -57,16 +66,14 @@ printf "%sAdjusting macOS...\n%s" $yellow $end
     defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
     # Prevents .DS_Store files
     defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-    # Display battery percentage in menu bar
-    defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+    # Set desktop as default location for new Finder windows
+    defaults write com.apple.finder NewWindowTarget -string "PfDe"
+
 
     # System Preferences
     #
     # Disable LCD font smoothing (default 4)
     defaults -currentHost write -globalDomain AppleFontSmoothing -int 0
-    # Hot corner: Bottom right, puts display to sleep
-    defaults write com.apple.dock wvous-br-corner -int 10
-    defaults write com.apple.dock wvous-br-modifier -int 0
     # Require password immediately after sleep or screen saver begins
     defaults write com.apple.screensaver askForPassword -int 1
     defaults write com.apple.screensaver askForPasswodDelay -int 0
@@ -81,6 +88,40 @@ printf "%sAdjusting macOS...\n%s" $yellow $end
     defaults write com.apple.Terminal ShowLineMarks -int 0
     # Stop terminal from saving zsh sessions
     defaults write com.apple.Terminal NSQuitAlwaysKeepsWindows -bool false
+
+    # Restart Finder and Dock (some changes might need a restart)
+    killall Finder
+    killall Dock
+
 } &> /dev/null
 
 printf "%sDone!%s" $green $end
+
+#
+# Additonal dependencies
+#
+
+printf "%s\n# Installing additional dependencies...\n%s" $yellow $end
+
+# Homebrew
+printf "%s\n# Homebrew:\n%s" $yellow $end
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+brew update
+brew upgrade
+
+printf "%s - Done!\n%s" $green $end
+
+# Formulae and casks
+
+printf "%s\n# Installing formulae and casks... \n%s" $green $end
+
+brew bundle
+
+# Cleanup everything
+
+brew doctor
+brew cleanup
+
+printf "%s\nHeck yeah, all done! \n%s" $green $end
