@@ -63,6 +63,7 @@ printf "%sAdjusting macOS...\n%s" $yellow $end
     # System Preferences
     #
     # Disable LCD font smoothing (default 4)
+    defaults -currentHost write -globalDomain AppleFontSmoothing -int 0
     # Hot corner: Bottom right, puts display to sleep
     defaults write com.apple.dock wvous-br-corner -int 10
     defaults write com.apple.dock wvous-br-modifier -int 0
