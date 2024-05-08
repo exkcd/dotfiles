@@ -24,6 +24,6 @@ The following list contains all of the Homebrew formulae and casks that I have i
 4. `brew install gh`
 5. `brew install git`
 
-### Usage
+## Usage
 
 It works for me, but if it doesn't work for you, that's a you problem, and I'm sorry.
