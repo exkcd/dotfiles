@@ -22,4 +22,4 @@ In the `Brewfile` there are all the formulae and casks that I frequently use. So
 
 ## Usage
 
-It works for me, but if it doesn't work for you, that's a you problem, and I'm sorry.
+It works for me, but if it doesn't work for you, I'm sorry.
