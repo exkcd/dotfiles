@@ -7,9 +7,10 @@ cask_args appdir: "~/Applications", require_sha: true
 # brew 'install'
 brew install 'git'
 brew install 'gh'
-brew install 'vim'
+brew install 'neovim'
 brew install 'python'
 brew install 'trash'
+brew install 'tmux'
 
 # brew install '--cask'
 cask "google-chrome"
