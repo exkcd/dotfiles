@@ -13,9 +13,9 @@ brew install 'trash'
 brew install 'tmux'
 
 # brew install '--cask'
+cask "hiddenbar"
 cask "google-chrome"
 cask "visual-studio-code"
-cask "gimp"
 cask "discord"
 cask "spotify"
 cask "obsidian"

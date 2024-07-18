@@ -103,6 +103,11 @@ printf "%sDone!%s" $green $end
 
 printf "%s\n# Installing additional dependencies...\n%s" $yellow $end
 
+# Install Oh My Zsh
+printf "%s\n# Oh My Zsh:\n%s" $yellow $end
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # Homebrew
 printf "%s\n# Homebrew:\n%s" $yellow $end
 
@@ -114,13 +119,11 @@ brew upgrade
 printf "%s - Done!\n%s" $green $end
 
 # Formulae and casks
-
 printf "%s\n# Installing formulae and casks... \n%s" $green $end
 
 brew bundle
 
 # Cleanup everything
-
 brew doctor
 brew cleanup
 

@@ -20,6 +20,16 @@ curl https://raw.githubusercontent.com/exkcd/config/main/config.sh > ~/Downloads
 
 In the `Brewfile` there are all the formulae and casks that I frequently use. Some more "case-by-case" casks are left out.
 
+
+### Other applicaitons
+
+* Adobe Lightroom (I edit photos for a hobby, definitely not required)
+
+* [BananaBin app](https://bananabin.app/) (It's a cute little trash can app that creates flies circling around the trash after a certain byte limit)
+
+* Zoom (Kinda necessary for university students, unfortunately)
+
+
 ## Usage
 
 It works for me, but if it doesn't work for you, I'm sorry.
