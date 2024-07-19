@@ -5,12 +5,12 @@ tap "homebrew/cask"
 cask_args appdir: "~/Applications", require_sha: true
 
 # brew 'install'
-brew install 'git'
-brew install 'gh'
-brew install 'neovim'
-brew install 'python'
-brew install 'trash'
-brew install 'tmux'
+brew 'git'
+brew 'gh'
+brew 'neovim'
+brew 'python'
+brew 'trash'
+brew 'tmux'
 
 # brew install '--cask'
 # cask "iterm2"
