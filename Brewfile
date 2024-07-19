@@ -13,6 +13,7 @@ brew install 'trash'
 brew install 'tmux'
 
 # brew install '--cask'
+# cask "iterm2"
 # cask "hiddenbar"
 # cask "google-chrome"
 # cask "visual-studio-code"
