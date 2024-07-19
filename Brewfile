@@ -13,13 +13,13 @@ brew install 'trash'
 brew install 'tmux'
 
 # brew install '--cask'
-cask "hiddenbar"
-cask "google-chrome"
-cask "visual-studio-code"
-cask "discord"
-cask "spotify"
-cask "obsidian"
-cask "notion"
-cask "notion-calendar"
-cask "rectangle"
-cask "alt-tab"
+# cask "hiddenbar"
+# cask "google-chrome"
+# cask "visual-studio-code"
+# cask "discord"
+# cask "spotify"
+# cask "obsidian"
+# cask "notion"
+# cask "notion-calendar"
+# cask "rectangle"
+# cask "alt-tab"
