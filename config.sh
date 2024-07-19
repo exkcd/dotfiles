@@ -29,8 +29,8 @@ end=$'\e[0m'
 # Copying dotfiles
 #
 
-printf "%s\n# Copying dotfiles...\n%s" $yellow $end
-    curl https://raw.githubusercontent.com/exkcd/config/main/ >
+# printf "%s\n# Copying dotfiles...\n%s" $yellow $end
+#    curl https://raw.githubusercontent.com/exkcd/config/main/ >
 
 #
 # macOS preferences
